@@ -10,6 +10,7 @@ $voiture->setParkBrake(true);
 try{
 echo $voiture->start();
 } catch(Exception $e){
+    $voiture->setParkBrake(false);
     echo "Be carreful with the brake it's dangerous !" . "\n";
 } finally{
     echo "Ma voiture roule comme un donut...";
